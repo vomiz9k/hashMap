@@ -54,7 +54,8 @@ unsigned int ded_hash(char* string)
 }
 ```
 # Проанализируем распределение слов в хэш-таблице.
-Выборка: ~60000 существующих английских слов
+Выборка: ~60000 существующих английских слов 
+
 Размер хэш-таблицы: 2017
 #### stupid_hash:
 ![stupid_hash](https://github.com/vomiz9k/hashMap/blob/master/hashMap/graph/stupid.png "stupid_hash")
@@ -73,7 +74,9 @@ unsigned int ded_hash(char* string)
 ```
 ### Профилируем:
 Выборка: ~370000 английских слов, над которыми проводятся операции вставки и удаления
+
 Размер хэш-таблицы: 59999
+
 Работаем следующим образом:
 ```cpp
 for (int j = 0; j < 100; ++j)
@@ -125,5 +128,14 @@ unsigned int ded_hash(char* string)
 ![runtime](https://github.com/vomiz9k/hashMap/blob/master/hashMap/diagrams/runtime.png "runtime")
 #### Время, потраченное на работу данной хэш-функции:
 ![absolute](https://github.com/vomiz9k/hashMap/blob/master/hashMap/diagrams/absolute%20time.png "absolute")
+## Полученные коэффициенты ускорения:
+<table>
+    <tr>
+        <td>Оптимизация</td><td>нет</td><td>-O1</td><td>-O2</td>
+    </tr>
+    <tr>
+        <td>Коэффициент</td><td>1,79</td><td>1,39</td><td>0,93</td>
+    </tr>
+</table>
 
 
