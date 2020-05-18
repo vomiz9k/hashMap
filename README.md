@@ -123,7 +123,7 @@ unsigned int ded_hash(char* string)
 ![asm](https://github.com/vomiz9k/hashMap/blob/master/hashMap/pictures_before_asm/asm.png "asm")
 # Момент истины: сравним с предыдущими результатами.
 #### Относительное время:
-![relative](https://github.com/vomiz9k/hashMap/blob/master/hashMap/diagrams/relative%20time.png "relative")
+![relative](https://github.com/vomiz9k/hashMap/blob/master/hashMap/diagrams/relative.png "relative")
 #### Время работы программы:
 ![runtime](https://github.com/vomiz9k/hashMap/blob/master/hashMap/diagrams/runtime.png "runtime")
 #### Время, потраченное на работу данной хэш-функции:
