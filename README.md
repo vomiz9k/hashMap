@@ -54,17 +54,17 @@ unsigned int ded_hash(char* string)
 }
 ```
 # Проанализируем распределение слов в хэш-таблице.
-## Выборка: ~60000 существующих английских слов
-## Размер хэш-таблицы: 2017
-stupid_hash:
+Выборка: ~60000 существующих английских слов
+Размер хэш-таблицы: 2017
+#### stupid_hash:
 ![stupid_hash](https://github.com/vomiz9k/hashMap/blob/master/hashMap/graph/stupid.png "stupid_hash")
-strlen_hash:
+#### strlen_hash:
 ![strlen_hash](https://github.com/vomiz9k/hashMap/blob/master/hashMap/graph/strlen.png "strlen_hash")
-mid_ascii_hash:
+#### mid_ascii_hash:
 ![mid_ascii_hash](https://github.com/vomiz9k/hashMap/blob/master/hashMap/graph/mid_ascii.png "mid_ascii_hash")
-ascii_sum_hash:
+#### ascii_sum_hash:
 ![ascii_sum_hash](https://github.com/vomiz9k/hashMap/blob/master/hashMap/graph/ascii.png "ascii_sum_hash")
-ded_hash:
+#### ded_hash:
 ![ded_hash](https://github.com/vomiz9k/hashMap/blob/master/hashMap/graph/ded.png "ded_hash")
 ###
 ## Лучшее распределение показывает ded_hash, будем оптимизировать его.
@@ -84,16 +84,19 @@ for (int j = 0; j < 100; ++j)
             hash_map.remove(words_array[i]);
  ```
  ### Результаты профилирования:
- Без оптимизации. Время работы: 24,7 с.
+#### Без оптимизации. Время работы: 24,7 с.
 ![no optinization](https://github.com/vomiz9k/hashMap/blob/master/hashMap/pictures_before_asm/o0.png "no optimization")
--O1. Время работы: 23 с.
+#### -O1. Время работы: 23 с.
 ![O1](https://github.com/vomiz9k/hashMap/blob/master/hashMap/pictures_before_asm/o1.png "O1")
--O2. Время работы: 18,8 с.
+#### -O2. Время работы: 18,8 с.
 ![O2](https://github.com/vomiz9k/hashMap/blob/master/hashMap/pictures_before_asm/o2.png "O2")
 #### Или, более наглядно:
 ![diagram](https://github.com/vomiz9k/hashMap/blob/master/hashMap/pictures_before_asm/diagram.png "diagran")
 
 ## Делаем вставку на языке ассемблера:
+```cpp
+#define _ASM
+```
 ```cpp
 unsigned int ded_hash(char* string)
 {
@@ -116,11 +119,11 @@ unsigned int ded_hash(char* string)
 Время работы: 19,6 с.
 ![asm](https://github.com/vomiz9k/hashMap/blob/master/hashMap/pictures_before_asm/asm.png "asm")
 # Момент истины: сравним с предыдущими результатами.
-Относительное время:
+#### Относительное время:
 ![relative](https://github.com/vomiz9k/hashMap/blob/master/hashMap/diagrams/relative%20time.png "relative")
-Время работы программы:
+#### Время работы программы:
 ![runtime](https://github.com/vomiz9k/hashMap/blob/master/hashMap/diagrams/runtime.png "runtime")
-Время, потраченное на работу данной хэш-функции:
+#### Время, потраченное на работу данной хэш-функции:
 ![absolute](https://github.com/vomiz9k/hashMap/blob/master/hashMap/diagrams/absolute%20time.png "absolute")
 
 
