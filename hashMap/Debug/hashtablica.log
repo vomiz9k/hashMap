@@ -1,7 +1,0 @@
-﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(467,5): warning MSB8028: промежуточный каталог (Debug\) содержит файлы, которые используются совместно с другим проектом (hashtablica.vcxproj).  Это может привести к ошибкам очистки и перестроения.
-  hashmap.cpp
-  hash_table.cpp
-C:\Users\b0y\source\repos\hashtablica\hashtablica\hash_table.cpp(80,23): warning C4018: <: несоответствие типов со знаком и без знака
-  list.cpp
-  Создание кода...
-  hashtablica.vcxproj -> C:\Users\b0y\source\repos\hashtablica\Debug\hashmap.exe
