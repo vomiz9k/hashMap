@@ -56,5 +56,5 @@ unsigned int ded_hash(char* string)
 ## Проанализируем распределение слов в хэш-таблице.
 ### Выборка: ~60000 существующих английских слов
 ### Размер хэш-таблицы: 2017
-![stupid_hash](https://github.com/vomiz9k/hashMap/blob/master/hashMap/graph/stupid.pdf "stupid_hash")
+![stupid_hash](https://github.com/vomiz9k/hashMap/blob/master/hashMap/graph/stupid.png "stupid_hash")
 
