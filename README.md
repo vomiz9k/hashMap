@@ -128,7 +128,7 @@ unsigned int ded_hash(char* string)
 ![runtime](https://github.com/vomiz9k/hashMap/blob/master/hashMap/diagrams/runtime.png "runtime")
 #### Время, потраченное на работу данной хэш-функции:
 ![absolute](https://github.com/vomiz9k/hashMap/blob/master/hashMap/diagrams/absolute%20time.png "absolute")
-## Полученные коэффициенты ускорения:
+## Полученные коэффициенты ускорения(абсолютное время до оптимизации / абсолютное время после оптимизации)
 <table>
     <tr>
         <td>Оптимизация</td><td>нет</td><td>-O1</td><td>-O2</td>
@@ -136,6 +136,6 @@ unsigned int ded_hash(char* string)
     <tr>
         <td>Коэффициент</td><td>1,79</td><td>1,39</td><td>0,93</td>
     </tr>
-</table>
+</table> 
 
 
